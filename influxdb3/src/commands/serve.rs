@@ -193,8 +193,8 @@ const MIN_REPLAY_PRELOAD_CONCURRENCY: usize = 10; // the min number of files tha
 
 // Core catalog limits. The shared catalog crate's `CatalogLimits` defaults are
 // Enterprise's; Core defines its own here so the two binaries can diverge.
-const CORE_NUM_DBS_LIMIT: usize = 5;
-const CORE_NUM_TABLES_LIMIT: usize = 2000;
+const CORE_NUM_DBS_LIMIT: usize = 100;
+const CORE_NUM_TABLES_LIMIT: usize = 10000;
 const CORE_NUM_COLUMNS_PER_TABLE_LIMIT: usize = 500;
 fn wal_replay_concurrency_limit_default() -> String {
     std::cmp::max(num_cpus::get(), MIN_REPLAY_PRELOAD_CONCURRENCY).to_string()
