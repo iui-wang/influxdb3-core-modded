@@ -1,0 +1,8 @@
+.git/
+target/
+logs/
+*.log
+.influxdb3_smoke*
+*.tar.gz
+*.tar
+node_modules/
